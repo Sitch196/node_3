@@ -1,9 +1,5 @@
 const fs = require("fs");
-
-const getFilmsData = () => {
-  const data = fs.readFileSync("top250.json", "utf8");
-  return JSON.parse(data);
-};
+const getFilmsData = require("../utils/getFilmsData");
 
 const readFilmById = (req, res) => {
   try {
@@ -17,7 +13,7 @@ const readFilmById = (req, res) => {
     const film = films.find((film) => film.id === id);
 
     if (!film) {
-      return res.status(404).json({ error: "Film not found" });
+      return res.status(404).json({ error: "Film with this id not found" });
     }
 
     res.json(film);
