@@ -30,16 +30,6 @@
     "position": 4
   },
   {
-    "id": "7",
-    "title": "Pulp Fiction (updated)",
-    "rating": "8.9",
-    "year": 1994,
-    "budget": 8000000,
-    "gross": 213928762,
-    "poster": "https://example.com/pulpfiction.jpg",
-    "position": 5
-  },
-  {
     "id": "4",
     "title": "Inception",
     "rating": "8.8",
@@ -47,7 +37,7 @@
     "budget": 160000000,
     "gross": 836800000,
     "poster": "https://example.com/inception.jpg",
-    "position": 6
+    "position": 5
   },
   {
     "id": "6",
@@ -57,7 +47,7 @@
     "budget": 63000000,
     "gross": 467222503,
     "poster": "https://example.com/matrix.jpg",
-    "position": 8
+    "position": 7
   },
   {
     "id": "3",
@@ -67,6 +57,6 @@
     "budget": 185000000,
     "gross": 1004558444,
     "poster": "https://example.com/darkknight.jpg",
-    "position": 9
+    "position": 8
   }
 ]
