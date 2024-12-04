@@ -6,29 +6,18 @@ const createFilm = (req, res) => {
     const films = getFilmsData();
     const { title, rating, year, budget, gross, poster, position } = req.body;
 
-    if (
-      !title ||
-      !rating ||
-      !year ||
-      !budget ||
-      !gross ||
-      !poster ||
-      position === undefined
-    ) {
-      return res
-        .status(400)
-        .json({ error: "All fields except id are required" });
-    }
+    const maxPosition =
+      films.length > 0 ? Math.max(...films.map((film) => film.position)) : 0;
 
-    const filmAtPosition = films.find((film) => film.position === position);
+    const adjustedPosition = Math.min(Math.max(1, position), maxPosition + 1);
 
-    if (filmAtPosition) {
-      films.forEach((film) => {
-        if (film.position >= position) {
-          film.position += 1;
-        }
-      });
-    }
+    const filmsToUpdate = films
+      .filter((film) => film.position >= adjustedPosition)
+      .sort((a, b) => b.position - a.position); // Sort in descending order
+
+    filmsToUpdate.forEach((film) => {
+      film.position += 1;
+    });
 
     const newId = String(
       films.length > 0 ? Math.max(...films.map((film) => +film.id)) + 1 : 1
@@ -42,10 +31,11 @@ const createFilm = (req, res) => {
       budget,
       gross,
       poster,
-      position,
+      position: adjustedPosition,
     };
 
     films.push(newFilm);
+
     films.sort((a, b) => a.position - b.position);
 
     saveFilmsData(films);

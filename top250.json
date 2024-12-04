@@ -7,7 +7,7 @@
     "budget": 25000000,
     "gross": 28341469,
     "poster": "https://example.com/shawshank.jpg",
-    "position": 2
+    "position": 1
   },
   {
     "id": "2",
@@ -17,10 +17,20 @@
     "budget": 6000000,
     "gross": 134966411,
     "poster": "https://example.com/godfather.jpg",
+    "position": 2
+  },
+  {
+    "id": "4",
+    "title": "The Dark Knight",
+    "rating": "9.0",
+    "year": 2008,
+    "budget": 185000000,
+    "gross": 1004558444,
+    "poster": "https://example.com/darkknight.jpg",
     "position": 3
   },
   {
-    "id": "5",
+    "id": "3",
     "title": "Inception",
     "rating": "8.8",
     "year": 2010,
@@ -28,35 +38,5 @@
     "gross": 836800000,
     "poster": "https://example.com/inception.jpg",
     "position": 4
-  },
-  {
-    "id": "4",
-    "title": "Inception",
-    "rating": "8.8",
-    "year": 2010,
-    "budget": 160000000,
-    "gross": 836800000,
-    "poster": "https://example.com/inception.jpg",
-    "position": 5
-  },
-  {
-    "id": "6",
-    "title": "The Matrix",
-    "rating": "8.7",
-    "year": 1999,
-    "budget": 63000000,
-    "gross": 467222503,
-    "poster": "https://example.com/matrix.jpg",
-    "position": 7
-  },
-  {
-    "id": "3",
-    "title": "The Dark Knight",
-    "rating": "9.0",
-    "year": 2008,
-    "budget": 185000000,
-    "gross": 1004558444,
-    "poster": "https://example.com/darkknight.jpg",
-    "position": 8
   }
 ]
