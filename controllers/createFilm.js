@@ -13,7 +13,7 @@ const createFilm = (req, res) => {
 
     const filmsToUpdate = films
       .filter((film) => film.position >= adjustedPosition)
-      .sort((a, b) => b.position - a.position); // Sort in descending order
+      .sort((a, b) => b.position - a.position);
 
     filmsToUpdate.forEach((film) => {
       film.position += 1;
